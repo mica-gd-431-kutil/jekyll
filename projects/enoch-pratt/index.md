@@ -1,7 +1,7 @@
 ---
 title: Enoch Pratt Library
 layout: projects
-project: project-1
+project: enoch-pratt
 ---
 
 # Hello Enoch Pratt
