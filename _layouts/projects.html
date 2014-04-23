@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+
+<div class="uno">
+	Project Template
+
+	{{ content }}
+</div>
+
+
+
+<div class="dos">
+	{% for post in site.categories.[page.project] %}
+		{% if forloop.first %}
+		<ul>
+		{% endif %}
+		<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+		{% if forloop.last %}
+		</ul>
+		{% endif %}
+	{% endfor %}
+</div>
+
+
