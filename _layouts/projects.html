@@ -2,25 +2,24 @@
 layout: default
 ---
 
-
-<div class="uno">
-	Project Template
-
+<div class="uno" role="main">
 	{{ content }}
 </div>
 
-
-
-<div class="dos">
+<div class="dos" role="complimentary">
 	{% for post in site.categories.[page.project] %}
 		{% if forloop.first %}
-		<ul>
+		<ul class="postList">
 		{% endif %}
-		<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+			<li class="post">
+				<a href="{{ site.baseurl }}{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</li>		
 		{% if forloop.last %}
 		</ul>
 		{% endif %}
 	{% endfor %}
 </div>
 
-
+{% include nav-projects.html %}
